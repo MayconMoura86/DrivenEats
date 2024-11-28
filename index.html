@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DrivenEats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="content">
+          <div class="brand">DrivenEats</div>
+          <div class="subtitle">Sua comida em 6 minutos</div>
+        </div>
+      </div>
+      
+
+  <main>
+    <!-- Categoria Prato -->
+    <section>
+      <h1>Primeiro, seu prato</h1>
+      <div class="items-list">
+        <div class="item" onclick="selectItem(this, 'prato')">
+          <img src="projeto__driven-eats__imagens/pf_frango.jpg" alt="Prato 1">
+          <div class="descricao">
+          <h2>Frango Yin Yang</h2>
+          <br />
+          <h3>Um pouco de batata <br />Um poco de salada</h3>
+          
+          <p>14.90</p></div>
+        </div>
+        <div class="item" onclick="selectItem(this, 'prato')">
+          <img src="projeto__driven-eats__imagens/pf_carne.jpg" alt="Prato 2">
+          <div class="descricao">
+          <h2>Carne Assada</h2>
+          <br />
+          <h3>Um pouco de batata <br />Um poco de salada</h3>
+          
+          <p>16.50</p></div>
+        </div>
+        <div class="item" onclick="selectItem(this, 'prato')">
+            <img src="projeto__driven-eats__imagens/pf_calabresa.png" alt="Prato 3">
+            <div class="descricao">
+            <h2>Calabresa</h2>
+            <br />
+            <h3>Um pouco de batata <br />Um poco de salada</h3>
+            
+            <p>14.50</p></div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Categoria Bebida -->
+    <section>
+      <h1>Agora, sua bebida</h1>
+      <div class="items-list">
+        <div class="item" onclick="selectItem(this, 'bebida')">
+          <img src="projeto__driven-eats__imagens/coca.png" alt="Bebida 1">
+          <div class="descricao">
+          <h2>Coquinha Gelada</h2>
+          <br />
+          <h3>Lata 350 ml <br /></h3>
+          <br />
+          <p>4.90</p></div>
+        </div>
+        <div class="item" onclick="selectItem(this, 'bebida')">
+          <img src="projeto__driven-eats__imagens/suco.png" alt="Bebida 2">
+          <div class="descricao">
+          <h2>Suco de Laranja</h2>
+          <br />
+          <h3>Copo 380 ml <br /></h3>
+          <br />
+          <p>6.00</p></div>
+        </div>
+        <div class="item" onclick="selectItem(this, 'bebida')">
+            <img src="projeto__driven-eats__imagens/fanta.png" alt="Bebida 3">
+            <div class="descricao">
+            <h2>Fanta</h2>
+            <br />
+            <h3>Lata 350 ml <br /></h3>
+            <br />
+            <p>4.80</p></div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Categoria Sobremesa -->
+    <section>
+      <h1>Por fim, sua sobremesa</h1>
+      <div class="items-list">
+        <div class="item" onclick="selectItem(this, 'sobremesa')">
+          <img src="projeto__driven-eats__imagens/pudim.jpg" alt="Sobremesa 1">
+          <div class="descricao">
+            <h2>Pudim</h2>
+            <br />
+            <h3>Apenas pudim <br /></h3>
+            <br />
+            <p>7.00</p></div>
+        </div>
+        <div class="item" onclick="selectItem(this, 'sobremesa')">
+          <img src="projeto__driven-eats__imagens/mouse.jpg" alt="Sobremesa 2">
+          <div class="descricao">
+            <h2>Mouse</h2>
+            <br />
+            <h3>Apenas mouse <br /></h3>
+            <br />
+            <p>9.50</p></div>
+        </div>
+        <div class="item" onclick="selectItem(this, 'sobremesa')">
+            <img src="projeto__driven-eats__imagens/brownie.jpg" alt="Sobremesa 3">
+            <div class="descricao">
+              <h2>Brownie</h2>
+              <br />
+              <h3>Apenas brownie <br /></h3>
+              <br />
+              <p>8.50</p></div>
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <button id="finalizar-pedido" disabled onclick="confirmOrder()">Selecione os 3 itens para fechar o pedido</button>
+  </footer>
+
+  <!-- Tela de confirmação -->
+  <div id="confirmacao" class="hidden">
+    <div class="overlay"></div> <!-- Fundo transparente -->
+    <div class="confirm-box">
+      <h4>Confirme seu pedido</h4>
+      <br />
+      <ul id="pedido-detalhes"></ul>
+      <p1 id="pedido-total"></p1>
+      <br />
+      <a id="whatsapp-link" href="#">Tudo certo, pode pedir!</a>
+      <br />
+      <button onclick="cancelOrder()">Cancelar</button>
+    </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
